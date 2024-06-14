@@ -1,0 +1,59 @@
+<form class="order-form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input id="username" name="username" [(ngModel)]="formData.username" required>
+    </div>
+    <div class="form-group">
+        <label for="address">Address:</label>
+        <input id="address" name="address" [(ngModel)]="formData.address" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input id="phone" name="phone" [(ngModel)]="formData.phone" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" name="email" [(ngModel)]="formData.email" required>
+    </div>
+    <div class="form-group">
+        <label for="tailor">Tailor:</label>
+        <input id="tailor" name="tailor" [(ngModel)]="formData.tailor" required>
+    </div>
+    <div class="form-group">
+        <label for="clothType">Cloth Type:</label>
+        <input id="clothType" name="clothType" [(ngModel)]="formData.clothType" required>
+    </div>
+    <div class="form-group">
+        <label for="shirtSize">Shirt Size:</label>
+        <input id="shirtSize" name="shirtSize" [(ngModel)]="formData.shirtSize" required>
+    </div>
+    <div class="form-group">
+        <label for="shoulderSize">Shoulder Size:</label>
+        <input id="shoulderSize" name="shoulderSize" [(ngModel)]="formData.shoulderSize" required>
+    </div>
+    <div class="form-group">
+        <label for="handSize">Hand Size:</label>
+        <input id="handSize" name="handSize" [(ngModel)]="formData.handSize" required>
+    </div>
+    <div class="form-group">
+        <label for="bodySize">Body Size:</label>
+        <input id="bodySize" name="bodySize" [(ngModel)]="formData.bodySize" required>
+    </div>
+    <div class="form-group">
+        <label for="fullOrHalfHand">Full or Half Hand:</label>
+        <input id="fullOrHalfHand" name="fullOrHalfHand" [(ngModel)]="formData.fullOrHalfHand" required>
+    </div>
+    <div class="form-group">
+        <label for="pantLength">Pant Length:</label>
+        <input id="pantLength" name="pantLength" [(ngModel)]="formData.pantLength" required>
+    </div>
+    <div class="form-group">
+        <label for="hipSize">Hip Size:</label>
+        <input id="hipSize" name="hipSize" [(ngModel)]="formData.hipSize" required>
+    </div>
+    <div class="form-group">
+        <label for="idea">Idea:</label>
+        <textarea id="idea" name="idea" [(ngModel)]="formData.idea" required></textarea>
+    </div>
+    <button type="submit" class="submit-button">Submit Order</button>
+</form>

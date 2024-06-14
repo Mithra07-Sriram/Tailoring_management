@@ -1,0 +1,12 @@
+<div id="top">
+    <p>REGISTER</p>
+    <label class="a">User name:</label>
+    <input class="aaa" type="text" placeholder="Enter the user name" name="username" [(ngModel)]="formData.username" required><br><br>
+    <label class="a">Email id:</label>
+    <input class="bbb" type="text" placeholder="Enter the email" name="email" [(ngModel)]="formData.email" required><br><br>
+    <label class="a">Create new Password :</label>
+    <input class="ccc" type="password" placeholder="Enter new password" name="crepass" [(ngModel)]="formData.crepass" required><br><br>
+    <label class="a">Confirm new Password :</label>
+    <input class="ddd" type="password" placeholder="Confirm new password" name="conpass" [(ngModel)]="formData.conpass" required><br><br><br>
+    <button class="w" type="button" (click)="onSubmit()">Submit</button>
+</div>

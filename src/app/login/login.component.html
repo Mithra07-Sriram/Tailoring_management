@@ -1,0 +1,11 @@
+<div id="top" class="login-container">
+    <p class="login-title">LOGIN</p>
+    <form>
+        <label class="form-label">Email id:</label>
+        <input type="text" placeholder="Enter the email id" name="email" [(ngModel)]="email" required><br><br>
+        <label class="form-label">Password :</label>
+        <input type="password" placeholder="Enter the password" name="password" [(ngModel)]="password" required><br><br>
+        <button class="submit-button" type="button" (click)="onSubmit()">Submit</button>
+    </form>
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</div>

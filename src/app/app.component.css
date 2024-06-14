@@ -1,0 +1,51 @@
+/* Global reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Top bar section */
+  .top-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .top-bar .left-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .top-bar .title {
+    margin-right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .top-bar .navigation {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .top-bar .navigation li {
+    margin-right: 10px;
+  }
+  
+  .top-bar .navigation li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .top-bar .navigation li a:hover {
+    background-color: #555;
+  }
+  

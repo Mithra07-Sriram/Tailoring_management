@@ -1,0 +1,58 @@
+<div class="container">
+    <h2>Cloth Details</h2>
+    <form [formGroup]="myform" (ngSubmit)="onsubmit()">
+      <label for="clothType">CLOTH TYPE:</label>
+      <input id="clothType" type="text" placeholder="Enter cloth type" formControlName="clothType" required><br><br>
+  
+      <label for="fullOrHalfHand">F/H HAND:</label>
+      <input id="fullOrHalfHand" type="text" placeholder="Enter full or half hand" formControlName="fullOrHalfHand" required><br><br>
+  
+      <label for="pocket">POCKET:</label>
+      <input id="pocket" type="text" placeholder="Enter pocket details" formControlName="pocket" required><br><br>
+  
+      <label for="fitting">FITTING:</label>
+      <input id="fitting" type="text" placeholder="Enter fitting details" formControlName="fitting" required><br><br>
+  
+      <button type="submit">Submit</button>
+    </form>
+  
+    <google-pay-button
+      environment="TEST"
+      buttonType="buy"
+      buttonColor="black"
+      [paymentRequest]="{
+        apiVersion: 2,
+        apiVersionMinor: 0,
+        allowedPaymentMethods: [
+          {
+            type: 'CARD',
+            parameters: {
+              allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+              allowedCardNetworks: ['AMEX', 'VISA', 'MASTERCARD']
+            },
+            tokenizationSpecification: {
+              type: 'PAYMENT_GATEWAY',
+              parameters: {
+                gateway: 'example',
+                gatewayMerchantId: 'exampleGatewayMerchantId'
+              }
+            }
+          }
+        ],
+        merchantInfo: {
+          merchantId: '12345678901234567890',
+          merchantName: 'Demo Merchant'
+        },
+        transactionInfo: {
+          totalPriceStatus: 'FINAL',
+          totalPriceLabel: 'Total',
+          totalPrice: '100.00',
+          currencyCode: 'USD',
+          countryCode: 'US'
+        }
+      }"
+      [style.width.px]="buttonWidth"
+      (loadpaymentdata)="onLoadPaymentData($event)"
+    ></google-pay-button>
+  </div>
+  

@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Models</h2>
+    <div class="models">
+      <div class="model" *ngFor="let model of models">
+        <img [src]="model.imageUrl" alt="Model Image">
+        <p>{{ model.name }}</p>
+        <button (click)="addToCart(model)">Add to Cart</button>
+        <button (click)="orderNow(model)">Order Now</button>
+      </div>
+    </div>
+  
+    <h2>Cart</h2>
+    <div class="cart">
+      <div class="cart-item" *ngFor="let item of cartItems">
+        <img [src]="item.imageUrl" alt="Cart Item Image">
+        <p>{{ item.name }}</p>
+      </div>
+    </div>
+  </div>
+  
